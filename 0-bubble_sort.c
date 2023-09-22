@@ -24,19 +24,18 @@ void swap(int *a, int *b)
 
 void bubble_sort(int *array, size_t size)
 {
-	int temp;
 	int flag;
+	size_t k, i;
 
-	for (int k = 0; k < size; k++)
+	for (k = 0; k < size; k++)
 	{
 		flag = 0;
-		for (int i = 0; i < size - k - 1; i++)
+		for (i = 0; i < size - k - 1; i++)
 		{
 			if (array[i] > array[i + 1])
 			{
 				swap(&array[i + 1], &array[i]);
 				flag = 1;
-				/* Uncomment the next line if you want to print the array at each step */
 				print_array(array, size);
 			}
 		}
